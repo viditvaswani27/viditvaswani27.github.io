@@ -11,6 +11,99 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			/* Timeline container */
+			.timeline {
+    			position: relative;
+    			max-width: 2000px;
+    			margin: 0 auto;
+			}
+
+			/* Timeline vertical line */
+			.timeline::after {
+   				content: '';
+   				position: absolute;
+    			width: 6px;
+    			background-color: #ddd;
+    			top: 0;
+   				bottom: 0;
+   			 	left: 50%;
+    			margin-left: -3px;
+			}
+
+			/* Timeline item container */
+			.timeline-item {
+   				padding: 20px 30px;
+    			position: relative;
+    			width: 50%;
+    			display: flex;
+    			align-items: center;
+			}
+
+			/* Positioning left and right */
+			.timeline-item.left {
+    			left: 0;
+    			flex-direction: row;
+    			text-align: right; /* Ensure text is aligned properly for left side */
+    			padding-right: 60px; /* Add extra padding to the right */
+			}
+
+			.timeline-item.right {
+   				left: 50%;
+    			flex-direction: row-reverse;
+    			text-align: left; /* Ensure text is aligned properly for right side */
+    			padding-left: 60px; /* Add extra padding to the left */
+			}
+
+			/* Arrow effect */
+			.timeline-item::before {
+    			content: " ";
+    			position: absolute;
+    			top: 15px;
+    			width: 0;
+			    height: 0;
+    			border: 10px solid transparent;
+			}
+
+			.timeline-item.left::before {
+    			right: -20px;
+    			border-left-color: #f9f9f9;
+			}
+
+			.timeline-item.right::before {
+    			left: -20px;
+			    border-right-color: #f9f9f9;
+			}
+
+			/* Image styling for logos */
+			.timeline-item img {
+    			width: 120px;
+    			height: 120px;
+    			object-fit: cover;
+    			margin: 0 20px;
+    			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+			}
+
+			/* Responsive adjustments */
+			@media screen and (max-width: 600px) {
+    			.timeline-item {
+        			width: 100%;
+        			padding-left: 30px;
+        			padding-right: 30px;
+        			flex-direction: column;
+        			text-align: center;
+    			}
+    			.timeline-item.left, .timeline-item.right {
+        		left: 0;
+    			}
+    			.timeline-item.left::before, .timeline-item.right::before {
+        		left: 20px;
+    			}
+    			.timeline-item img {
+        		margin-bottom: 10px;
+    			}
+			}	
+		</style>
 	</head>
 	<body class="is-preload">
 
@@ -28,11 +121,11 @@
 							<li><a href="index.html">About Me</a></li>
 							<li class="active"><a href="generic.html">Education</a></li>
 							<li><a href="elements.html">Projects</a></li>
+							<li><a href="New Page.html">Experience</a></li>
 						</ul>
 						<ul class="icons">
 							<li><a href="https://www.linkedin.com/in/vidit-vaswani-7503b8213/" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
-							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="https://github.com/viditvaswani27" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
 						</ul>
 					</nav>
 
@@ -41,17 +134,61 @@
 						<!-- Post -->
 							<section class="post">
 								<header class="major">
-									<h1>Education Background<br />
-									</h1>
-									<p>Aenean ornare velit lacus varius enim ullamcorper proin aliquam<br />
-									facilisis ante sed etiam magna interdum congue. Lorem ipsum dolor<br />
-									amet nullam sed etiam veroeros.</p>
+									<h1>Education Background<br /></h1>
 								</header>
-								<div class="image main"><img src="images/pic01.jpg" alt="" /></div>
-								<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur sapien risus, commodo eget turpis at, elementum convallis enim turpis, lorem ipsum dolor sit amet nullam.</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus. Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum.</p>
-							</section>
 
+								<div class="timeline">
+									
+									<!-- Postgrad -->
+									<div class="timeline-item right">
+										<img src="images/SSE_logo.png" alt="University Logo" />
+										<div>
+											<h2>Postgraduate</h2>
+											<p><strong>Symbiosis School of Economics</strong> <br>
+											MSc.Economics
+											<br> Graduation Year: 2025
+											<br> CGPA: 9.08 (out of 10) </p>
+										</div>
+									</div>
+									
+									<!-- Undergraduate -->
+									<div class="timeline-item left">
+										<img src="images/nmims_logo.png" alt="College Logo" />
+										<div>
+											<h2>Undergraduate</h2>
+											<p><strong>Narsee Monjee Institute of Management Studies </strong> <br> 
+											BSc. Economics <br> 
+											Graduation Year: 2023
+											<br> CGPA: 3.26 (out of 4)</p>
+										</div>
+									</div>
+									
+									<!-- 12th Grade -->
+									<div class="timeline-item right">
+										<img src="images/hr_logo.png" alt="High School Logo" />
+										<div>
+											<h2>12th Grade</h2>
+											<p><strong>HR. College of Commerce and Economics</strong> <br> 
+											Board: HSC <br>
+											Completed: 2017 <br> 
+											Percentage: 90%</p>
+										</div>
+									</div>
+									
+									<!-- 10th Grade -->
+									<div class="timeline-item left">
+										<img src="images/lfs_logo.jpeg" alt="Secondary School Logo" />
+										<div>
+											<h2>10th Grade</h2>
+											<p><strong>Lokhandwala Foundation School</strong> <br> 
+											Board: ISCE <br> 
+											Completed: 2017 <br> 
+											Percentage: 95%</p>
+										</div>
+									</div>
+								
+								</div>
+							</section>
 					</div>
 
 				<!-- Footer -->
@@ -95,13 +232,11 @@
 							<h3>Social</h3>
 							<ul class="icons alt">
 								<li><a href="https://www.linkedin.com/in/vidit-vaswani-7503b8213/" class="icon brands fa-linkedin"><span class="label">Linkedin</span></a></li>
-								<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-								<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								<li><a href="https://github.com/viditvaswani27" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
 							</ul>
 						</section>
 					</section>
 				</footer>
-
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
