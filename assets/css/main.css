@@ -3187,6 +3187,21 @@ input, select, textarea {
 			}
 
 		}
+    
+		/* Add this to your main.css or a style block */
+    	.video main video {
+        	width: 100%;
+        	height: auto;  /* This ensures the aspect ratio is maintained */
+        	max-width: 100%;
+    	}
+
+    /* Ensure that it is visible on mobile by targeting media queries */
+   		 @media screen and (max-width: 768px) {
+       		 .video main {
+            	display: block;
+       		 }
+    	}
+
 
 	.pagination a, .pagination span {
 		border-color: #eeeeee;
